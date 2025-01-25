@@ -3,14 +3,14 @@
 
 <head>
     <title>TW Group Coworking</title>
-    @vite('resources/sass/app.scss')
+    @vite(['resources/css/app.css'])
 </head>
 
 <body>
-    <div id="app">
+    <section id="app" class="bg-gradient-primary">
         @yield('content')
-    </div>
-    @vite('resources/js/app.js')
+    </section>
+    @vite(['resources/js/app.js'])
 </body>
 
 </html>
