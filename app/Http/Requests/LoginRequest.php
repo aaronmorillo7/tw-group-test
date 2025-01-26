@@ -9,7 +9,7 @@ class LoginRequest extends FormRequest
     public function rules() {
         return [
             'email' => 'required|email',
-            'password' => 'required|string|min:8'
+            'password' => "required|string|min:8|max:20|regex:/^(?=.*[!@#$%^&*.]).+$/",
         ];
     }
 }

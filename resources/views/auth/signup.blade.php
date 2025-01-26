@@ -13,18 +13,19 @@
                     <div class="col-lg-5 d-none d-lg-block bg-register-image">
                         <div class="p-5">
                             <h1 class="h4 text-gray-900 mb-4">TW Group coworking</h1>
-                            <img src="{{asset('storage/images/businesspeople-meeting-1.jpg')}}" class="img-fluid rounded-lg" />
+                            <img src="{{Vite::asset('resources/images/businesspeople-meeting-1.jpg')}}" class="img-fluid rounded-lg" />
                         </div>
                     </div>
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Crea una cuenta!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Crea una cuenta</h1>
                             </div>
                             <form class="user" action="{{ url('signup') }}" method="POST">
                                 @csrf
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <label class="form-label">Email: <span class="text-danger">*</span></label>
                                         <input id="email" name="email" type="text" class="form-control form-control-user py-2" placeholder="Email">
                                         @error('email')
                                         <span class="invalid-feedback d-block">
@@ -33,6 +34,7 @@
                                         @enderror
                                     </div>
                                     <div class="col-sm-6">
+                                    <label class="form-label">Año de nacimiento: <span class="text-danger">*</span></label>
                                         <input id="birth_date" name="birth_date" type="date" class="form-control form-control-user py-2" placeholder="yyyy-mm-dd">
                                         @error('birth_date')
                                         <span class="invalid-feedback d-block">
@@ -43,6 +45,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <label class="form-label">Nombre: <span class="text-danger">*</span></label>
                                         <input id="first_name" name="first_name" type="text" class="form-control form-control-user py-2" placeholder="Nombre">
                                         @error('first_name')
                                         <span class="invalid-feedback d-block">
@@ -51,6 +54,7 @@
                                         @enderror
                                     </div>
                                     <div class="col-sm-6">
+                                        <label class="form-label">Apellido: <span class="text-danger">*</span></label>
                                         <input id="last_name" name="last_name" type="text" class="form-control form-control-user py-2" placeholder="Apellido">
                                         @error('last_name')
                                         <span class="invalid-feedback d-block">
@@ -61,6 +65,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <label class="form-label">Género: <span class="text-danger">*</span></label>
                                         <select id="genre" name="genre" class="form-select form-control rounded-pill py-2 bg-white" aria-label="Género">
                                             <option selected>Selecciona tu género</option>
                                             <option value="f">Femenino</option>
@@ -73,6 +78,7 @@
                                         @enderror
                                     </div>
                                     <div class="col-sm-6">
+                                        <label class="form-label">Teléfono:</label>
                                         <input id="phone" name="phone" type="text" class="form-control form-control-user py-2" placeholder="Teléfono">
                                         @error('phone')
                                         <span class="invalid-feedback d-block">
@@ -83,6 +89,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <label class="form-label">Contraseña: <span class="text-danger">*</span></label>
                                         <input id="password" name="password" type="password" class="form-control form-control-user py-2" placeholder="Contraseña">
                                         @error('password')
                                         <span class="invalid-feedback d-block">
@@ -91,6 +98,7 @@
                                         @enderror
                                     </div>
                                     <div class="col-sm-6">
+                                        <label class="form-label">Confirma la contraseña: <span class="text-danger">*</span></label>
                                         <input id="password_confirmation" name="password_confirmation" type="password" class="form-control form-control-user py-2" placeholder="Repetir contraseña">
                                         @error('password_confirmation')
                                         <span class="invalid-feedback d-block">

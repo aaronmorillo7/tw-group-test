@@ -12,7 +12,7 @@
             <a class="nav-link">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</span>
                 <img class="img-profile rounded-circle"
-                    src="{{asset('storage/images/undraw_profile.svg')}}">
+                    src="{{Vite::asset('resources/images/undraw_profile.svg')}}"> 
             </a>
         </li>
 

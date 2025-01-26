@@ -18,7 +18,7 @@ class CreateClientsSeeder extends Seeder
             'genre' => 'm',
             'birth_date' => '1999-01-01', 
             'phone' => '+58123456723', 
-            'password' => Hash::make('123456789'),
+            'password' => Hash::make('Client123.'),
         ]);
         $secondClient = User::create([
             'email' => 'anar@test.com',
@@ -27,7 +27,7 @@ class CreateClientsSeeder extends Seeder
             'genre' => 'f',
             'birth_date' => '1999-12-01', 
             'phone' => '+58123456456', 
-            'password' => Hash::make('123456789'),
+            'password' => Hash::make('Client123.'),
         ]);
         $firstClient->assignRole('client');
         $secondClient->assignRole('client');

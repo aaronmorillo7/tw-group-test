@@ -66,22 +66,24 @@
                                             <form action="{{ route('bookings.update.status', $booking->id) }}" method="POST">
                                                 @csrf
                                                 @method('PUT')
-                                                <input id="status" name="status" type="hidden" value="accepted">
+                                                <input name="status" type="hidden" value="approved">
                                                 <button type="submit" class="btn btn-success text-white">
                                                     <i class="bi bi-check-lg"></i>
                                                 </button>
                                             </form>
+                                    @endif
+                                    @if($booking->status == 'pending' || $booking->status == 'approved')
                                             <form action="{{ route('bookings.update.status', $booking->id) }}" method="POST">
                                                 @csrf
                                                 @method('PUT')
-                                                <input id="status" name="status" type="hidden" value="rejected">
+                                                <input name="status" type="hidden" value="rejected">
                                                 <button type="submit" class="btn btn-danger text-white">
                                                     <i class="bi bi-x-lg"></i>
                                                 </button>
                                             </form>
                                         </div>
                                     @else
-                                        Ninguna acción por hacer!
+                                        No hay ninguna acción por hacer!
                                     @endif
                                 @endcan
                             </td>

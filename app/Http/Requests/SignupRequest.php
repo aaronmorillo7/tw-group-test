@@ -11,10 +11,10 @@ class SignupRequest extends FormRequest
             'email' => 'required|email|unique:users',
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'age' => 'required|numeric',
+            'genre' => 'required|string|in:f,m',
             'birth_date' => 'required|string', 
-            'phone' => 'unique:users|string', 
-            'password' => 'required|string|min:8|confirmed',
+            'phone' => 'nullable|string', 
+            'password' => "required|string|min:8|max:20|confirmed|regex:/^(?=.*[!@#$%^&*.]).+$/",
         ];
     }
 }
