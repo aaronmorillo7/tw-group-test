@@ -12,9 +12,8 @@ class SignupRequest extends FormRequest
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'age' => 'required|numeric',
-            'genre' => 'required|string|in:m,f|max:1',
             'birth_date' => 'required|string', 
-            'phone' => 'required|string', 
+            'phone' => 'unique:users|string', 
             'password' => 'required|string|min:8|confirmed',
         ];
     }

@@ -7,30 +7,31 @@ use App\Models\User;
 
 class UserRepository implements UserRepositoryInterface
 {
-    public function all()
-    {
-        return User::all();
+    protected $user;
+
+    public function __construct(User $user) {
+        $this->user = $user;
     }
 
-    public function find($id)
-    {
-        return User::find($id);
+    public function all() {
+        return $this->user->all();
     }
 
-    public function create(array $data)
-    {
-        return User::create($data)->assignRole('client');
+    public function find($id) {
+        return $this->user->find($id);
     }
 
-    public function update($id, array $data)
-    {
+    public function create(array $data) {
+        return $this->user->create($data)->assignRole('client');
+    }
+
+    public function update($id, array $data) {
         $user = $this->find($id);
         $user->update($data);
         return $user;
     }
 
-    public function delete($id)
-    {
-        return User::destroy($id);
+    public function delete($id) {
+        return $this->user->destroy($id);
     }
 }

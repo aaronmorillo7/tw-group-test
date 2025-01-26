@@ -1,0 +1,11 @@
+textarea {
+    resize: none;
+}
+
+/* input, select, textarea {
+    outline: none;
+}
+
+input::hover, select::hover, textarea::hover {
+    outline: none;
+} */

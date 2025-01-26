@@ -17,10 +17,9 @@ return new class extends Migration
             $table->string('password');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('age');
             $table->string('genre');
             $table->string('birth_date');
-            $table->string('phone')->nullable();
+            $table->string('phone')->unique()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

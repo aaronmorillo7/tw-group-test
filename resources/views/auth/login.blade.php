@@ -1,6 +1,8 @@
 @extends('app')
 
-@section('content')
+
+@section('body')
+<section class="bg-gradient-primary">
 <div class="bg-gradient-primary vh-100">
 
     <div class="container py-5">
@@ -58,4 +60,5 @@
 
     </div>
 </div>
+</section>
 @endsection

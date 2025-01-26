@@ -7,9 +7,6 @@ use App\Http\Requests\SignupRequest;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Redirect;
-
 class AuthController extends Controller
 {
     protected $userRepository;
@@ -29,7 +26,7 @@ class AuthController extends Controller
         }
 
         return back()->withErrors([
-            'credentials' => 'The provided credentials do not match our records.',
+            'credentials' => 'Los datos introducidos no concuerdan con los registros.',
         ]);
     }
 
@@ -43,7 +40,7 @@ class AuthController extends Controller
 
         auth()->login($user);
 
-        return redirect('dashboard.index');
+        return redirect()->intended(route('dashboard.index'));
     }
 
     public function logout(Request $request)
@@ -54,6 +51,6 @@ class AuthController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('login');
+        return redirect()->intended(route('login'));
     }
 }

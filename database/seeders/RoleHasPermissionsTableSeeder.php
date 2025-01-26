@@ -14,9 +14,9 @@ class RoleHasPermissionsTableSeeder extends Seeder
     public function run(): void
     {
         $admin = Role::findByName('admin');
-        $admin->givePermissionTo(['create rooms', 'edit rooms', 'delete rooms', 'get all bookings', 'get all rooms']);
+        $admin->givePermissionTo(['create_room', 'update_room', 'delete_room', 'get_bookings', 'get_bookings_by_room', 'get_rooms', 'get_room', 'update_bookings']);
 
         $client = Role::findByName('client');
-        $client->givePermissionTo(['create bookings', 'edit bookings', 'delete bookings', 'get own bookings']);
+        $client->givePermissionTo(['create_booking', 'get_bookings']);
     }
 }

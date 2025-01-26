@@ -7,20 +7,16 @@ use Spatie\Permission\Models\Permission;
 
 class PermissionsTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        Permission::create(['name' => 'create rooms']);
-        Permission::create(['name' => 'edit rooms']);
-        Permission::create(['name' => 'delete rooms']);
-        Permission::create(['name' => 'get all bookings']);
-        Permission::create(['name' => 'get all rooms']);
-
-        Permission::create(['name' => 'create bookings']);
-        Permission::create(['name' => 'edit bookings']);
-        Permission::create(['name' => 'delete bookings']);
-        Permission::create(['name' => 'get own bookings']);
+        Permission::create(['name' => 'create_room']);
+        Permission::create(['name' => 'update_room']);
+        Permission::create(['name' => 'delete_room']);
+        Permission::create(['name' => 'get_bookings']);
+        Permission::create(['name' => 'get_rooms']);
+        Permission::create(['name' => 'get_room']);
+        Permission::create(['name' => 'create_booking']);
+        Permission::create(['name' => 'get_bookings_by_room']);
+        Permission::create(['name' => 'update_bookings']);
     }
 }
