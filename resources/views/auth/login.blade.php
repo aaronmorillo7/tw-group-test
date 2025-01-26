@@ -49,7 +49,7 @@
                                     Iniciar sesión
                                 </button>
                             </form>
-                            <div class="text-center">
+                            <div class="text-center mt-5">
                                 <a class="small" href="{{ route('signup') }}">No tienes una cuenta? Creala aqui</a>
                             </div>
                         </div>

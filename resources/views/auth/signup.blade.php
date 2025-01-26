@@ -103,7 +103,7 @@
                                     Registrar cuenta
                                 </button>
                             </form>
-                            <div class="text-center">
+                            <div class="text-center mt-5">
                                 <a class="small" href="{{ route('login') }}">Ya tienes una cuenta? Inicia sesión aquí</a>
                             </div>
                         </div>
